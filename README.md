@@ -1,6 +1,6 @@
 # cra-template-terrepa
 
-An All-in-one template to create Electron applications for Create React App with TypeScript and SASS/SCSS files. It includes also Prettier and ESLint with configurations recommended by AirBnB
+An All-in-one template to create Electron applications for Create React App with TypeScript and SASS/SCSS files. It includes also Prettier and ESLint with configurations recommended by AirBnB,  and support for Recoil State Management Library.
 
 # Requirements
 - Node.js 12.16.3 or greater

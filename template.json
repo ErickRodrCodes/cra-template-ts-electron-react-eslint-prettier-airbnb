@@ -38,7 +38,7 @@
             "postinstall": "yarn start",
             "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
             "lint:fix": "yarn lint -- --fix",
-            "launch:dev": "concurrently -k \"yarn start\" \"yarn run electron:dev\"",
+            "launch:dev": "concurrently -k \"yarn only:react\" \"yarn run electron:dev\"",
             "electron:dev": "wait-on tcp:3000 && electron-forge start",
             "package": "react-scripts build && electron-forge package",
             "make": "react-scripts build && electron-forge make"

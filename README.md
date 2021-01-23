@@ -1,6 +1,12 @@
 # cra-template-ts-electron-react-eslint-prettier-airbnb
 
-An All-in-one template to create Electron applications for Create React App with TypeScript and SASS/SCSS files. It includes also Prettier and ESLint with configurations recommended by AirBnB,  and support for Recoil State Management Library.
+An All-in-one template to create Electron applications with Create React App. The template includes:
+- TypeScript 4.1.13
+- React 17
+- Recoil
+- ESLint & Prettier with AirBnB Settings
+- Support for SASS/SCSS files
+- Electron 11 with electron-forge operations to build and develop executable files
 
 # Requirements
 - Node.js 12.16.3 or greater
@@ -13,4 +19,8 @@ Use create-react-app and run the provided template:
 $ npx create-react-app my_new_app --template cra-template-ts-electron-react-eslint-prettier-airbnb
 ```
 ## Developing with Electron
-To start developing use `yarn dev` so it will execute the development server from create-react-app. after it is ready, electron-forge will load the application on the browser.
+To start developing use `yarn start` so it will execute the compilation of the electron main process and the development server from create-react-app. after the build is complete, electron-forge will load the application on the browser.
+
+Important Note: **After installation, the postinstall scriot will run the default project and it might take a while since electron-forge needs to initialize all the electron framework in your project.**
+
+After the application starts, you are free to close the electron window and start to develop your application.

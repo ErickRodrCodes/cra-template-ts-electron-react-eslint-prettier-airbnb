@@ -29,16 +29,17 @@
             "web-vitals": "^1.1.0"
         },
         "scripts": {
-            "start": "react-scripts start",
+            "start": "tsc-watch --project ./main --onSuccess \"yarn launch:dev\"",
+            "only:react": "react-scripts start",
+            "only:electron": "electron-forge start",
             "build": "react-scripts build",
             "test": "react-scripts test",
             "eject": "react-scripts eject",
             "postinstall": "yarn dev",
             "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
             "lint:fix": "yarn lint -- --fix",
-            "dev": "tsc-watch --project ./main --onSuccess \"yarn launch:dev\"",
-            "launch:dev": "concurrently -k \"yarn start\" \"yarn run electron\"",
-            "electron": "wait-on tcp:3000 && electron-forge start",
+            "launch:dev": "concurrently -k \"yarn start\" \"yarn run electron:dev\"",
+            "electron:dev": "wait-on tcp:3000 && electron-forge start",
             "package": "react-scripts build && electron-forge package",
             "make": "react-scripts build && electron-forge make"
         },

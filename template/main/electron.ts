@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* eslint-disable import/no-extraneous-dependencies */
 import { app, BrowserWindow } from 'electron'
 import isDev from 'electron-is-dev'
 import installExtension, { REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } from 'electron-devtools-installer'

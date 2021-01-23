@@ -7,6 +7,8 @@ An All-in-one template to create Electron applications with Create React App. Th
 - ESLint & Prettier with AirBnB Settings
 - Support for SASS/SCSS files
 - Electron 11 with electron-forge operations to build and develop executable files
+- Support for `generate-react-cli` npx executable.
+- lint-staged with Husky to keep your commit cleans and error-free.
 
 # Requirements
 - Node.js 12.16.3 or greater
@@ -24,3 +26,9 @@ To start developing use `yarn start` so it will execute the compilation of the e
 Important Note: **After installation, the postinstall script will run the default project and it might take a while since electron-forge needs to initialize all the electron framework in your project.**
 
 After the application starts, you are free to close the electron window and start to develop your application.
+
+## Adding Components
+Take advantage of the current `generate-react-cli.json` to generate components on the fly. To generate a new component run in your terminal
+```
+$ npx generate-react-cli component MyNewComponent
+```

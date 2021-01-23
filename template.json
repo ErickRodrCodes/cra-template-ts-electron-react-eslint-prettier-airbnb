@@ -10,6 +10,7 @@
             "@types/react-dom": "^17.0.0",
             "@typescript-eslint/eslint-plugin": "^4.14.0",
             "@typescript-eslint/parser": "^4.14.0",
+            "cra-template-ts-electron-react-eslint-prettier-airbnb": "0.0.11",
             "electron-squirrel-startup": "^1.0.0",
             "eslint": "^7.18.0",
             "eslint-config-airbnb-typescript": "^12.0.0",
@@ -30,14 +31,13 @@
         },
         "scripts": {
             "start": "tsc-watch --project ./main --onSuccess \"yarn launch:dev\"",
-            "only:react": "react-scripts start",
-            "only:electron": "electron-forge start",
             "build": "react-scripts build",
             "test": "react-scripts test",
             "eject": "react-scripts eject",
-            "postinstall": "yarn start",
-            "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
-            "lint:fix": "yarn lint -- --fix",
+            "only:react": "react-scripts start",
+            "only:electron": "electron-forge start",
+            "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx main/ --ext .tsx",
+            "lint:fix": "yarn lint --fix",
             "launch:dev": "concurrently -k \"yarn only:react\" \"yarn run electron:dev\"",
             "electron:dev": "wait-on tcp:3000 && electron-forge start",
             "package": "react-scripts build && electron-forge package",
@@ -70,6 +70,8 @@
             "electron": "^11.2.1",
             "electron-devtools-installer": "^3.1.1",
             "electron-is-dev": "^1.2.0",
+            "husky": "^4.3.8",
+            "lint-staged": "^10.5.3",
             "recoil": "^0.1.2",
             "tsc-watch": "^4.2.9",
             "wait-on": "^5.2.1"
@@ -99,6 +101,21 @@
                         "config": {}
                     }
                 ]
+            }
+        },
+        "lint-staged": {
+            "src/**/*.{ts,tsx,json,css,scss}": [
+                "prettier --write",
+                "eslint src/ --ext .js,.jsx,.ts,.tsx --fix"
+            ],
+            "main/**/*.{ts,tsx,json}": [
+                "prettier --write",
+                "eslint main/ --ext .ts,.tsx --fix"
+            ]
+        },
+        "husky": {
+            "hooks": {
+                "pre-commit": "lint-staged"
             }
         }
     }

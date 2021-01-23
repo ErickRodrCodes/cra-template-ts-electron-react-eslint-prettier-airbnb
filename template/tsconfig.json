@@ -26,5 +26,8 @@
   "include": [
     "src/**/*",
     "main/**/*"
+  ],
+  "exclude": [
+    "scripts/templates/**/*"
   ]
 }

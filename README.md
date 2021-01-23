@@ -23,7 +23,7 @@ $ npx create-react-app my_new_app --template cra-template-ts-electron-react-esli
 ## Developing with Electron
 To start developing use `yarn start` so it will execute the compilation of the electron main process and the development server from create-react-app. after the build is complete, electron-forge will load the application on the browser.
 
-Important Note: **After installation, the postinstall script will run the default project and it might take a while since electron-forge needs to initialize all the electron framework in your project.**
+Important Note: **The first time you run `yarn start` will take a while since electron-forge needs to initialize all the electron framework in your project.**
 
 After the application starts, you are free to close the electron window and start to develop your application.
 

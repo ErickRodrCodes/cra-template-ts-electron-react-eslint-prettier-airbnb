@@ -1,7 +1,7 @@
 # cra-template-ts-electron-react-eslint-prettier-airbnb
 
 An All-in-one template to create Electron applications with Create React App. The template includes:
-- TypeScript 4.1.13
+- TypeScript 4.1.2
 - React 17
 - Recoil
 - ESLint & Prettier with AirBnB Settings

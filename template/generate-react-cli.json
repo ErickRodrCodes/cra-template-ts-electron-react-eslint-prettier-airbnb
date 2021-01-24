@@ -6,8 +6,8 @@
   "component": {
     "default": {
       "customTemplates": {
-        "component": "templates/component.tsx",
-        "test": "templates/test.tsx"
+        "component": "scripts/templates/component.tsx",
+        "test": "scripts/templates/test.tsx"
       },
       "path": "src/Components",
       "withStyle": true,

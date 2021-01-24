@@ -1,14 +1,17 @@
 # cra-template-ts-electron-react-eslint-prettier-airbnb
 
+## What it is?
+
 An All-in-one template to create Electron applications with Create React App. The template includes:
 - TypeScript 4.1.2
-- React 17
+- React 17 with react-app-rewired and react-app-rewire-aliases to allow path aliases in webpack
 - Recoil
 - ESLint & Prettier with AirBnB Settings
 - Support for SASS/SCSS files
+- StyleLint to clean up and format SASS/SCSS stylesheets
 - Electron 11 with electron-forge operations to build and develop executable files
-- Support for `generate-react-cli` npx executable.
-- lint-staged with Husky to keep your commit cleans and error-free.
+- Support for `generate-react-cli` npx executable
+- lint-staged with Husky to keep your commit cleans and error-free
 
 # Requirements
 - Node.js 12.16.3 or greater
@@ -31,4 +34,19 @@ After the application starts, you are free to close the electron window and star
 Take advantage of the current `generate-react-cli.json` to generate components on the fly. To generate a new component run in your terminal
 ```
 $ npx generate-react-cli component MyNewComponent
+```
+## Custom Paths
+Paths are defined in two places: 
+- ./tsconfig.paths.js
+- ./config/config-overrides.js
+
+As an example, I have left a custom path called `@` so you can invoke your scripts and stylesheets without going nuts. Example:
+```
+import MyNewComponent from `@/Components/MyNewComponent`;
+```
+
+or in SCSS
+
+```
+@import "@/lib/scss/_master";
 ```

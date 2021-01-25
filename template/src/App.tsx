@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import electron from '@/electron';
+import { remote } from 'electron';
 
 import logo from './logo.svg';
 import './App.scss';
 
-const { remote } = electron;
 const App: React.FC = () => {
   const handleClose = (e: any): void => {
     e.preventDefault();

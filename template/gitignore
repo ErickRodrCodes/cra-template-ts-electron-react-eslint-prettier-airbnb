@@ -18,3 +18,6 @@ yarn-debug.log*
 yarn-error.log*
 
 out/
+
+/public/main.js
+/public/main.js.map

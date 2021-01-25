@@ -6,6 +6,7 @@ const path = require('path');
 module.exports = function override(config, env) {
 	config = rewireAliases.aliasesOptions({
     '@': path.resolve(__dirname, `${paths.appSrc}`),
-	})(config, env);
+  })(config, env);
+  config.target = "electron-renderer";
   return config;
 }

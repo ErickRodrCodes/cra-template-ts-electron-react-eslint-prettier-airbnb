@@ -1,7 +1,5 @@
 {
     "package": {
-        "main": "public/electron.js",
-        "homepage": "./",
         "dependencies": {
             "@testing-library/jest-dom": "^5.11.9",
             "@testing-library/react": "^11.2.3",
@@ -31,7 +29,7 @@
             "web-vitals": "^1.1.0"
         },
         "scripts": {
-            "start": "tsc-watch main/electron.ts --outDir ./public --esModuleInterop true --sourceMap true --removeComments true --onSuccess \"yarn launch:dev\"",
+            "start": "tsc-watch main/main.ts --outDir ./public --esModuleInterop true --sourceMap true --removeComments true --onSuccess \"yarn launch:dev\"",
             "build": "react-app-rewired build",
             "test": "react-app-rewired test",
             "eject": "react-scripts eject",
@@ -61,6 +59,7 @@
                 "last 1 safari version"
             ]
         },
+        "main": "public/main.js",
         "devDependencies": {
             "@electron-forge/cli": "^6.0.0-beta.54",
             "@electron-forge/maker-deb": "^6.0.0-beta.54",
@@ -70,6 +69,7 @@
             "@types/electron": "^1.6.10",
             "@types/electron-devtools-installer": "^2.2.0",
             "@types/electron-is-dev": "^1.1.1",
+            "@types/node": "^14.14.22",
             "concurrently": "^5.3.0",
             "electron-devtools-installer": "^3.1.1",
             "electron-is-dev": "^1.2.0",
@@ -111,6 +111,7 @@
                 ]
             }
         },
+        "homepage": "./",
         "lint-staged": {
             "src/**/*.{ts,tsx}": [
                 "prettier --write",
@@ -118,7 +119,7 @@
             ],
             "main/**/*.{ts,tsx}": [
                 "prettier --write",
-                "eslint public/ --ext .ts,.tsx --fix"
+                "eslint main/ --ext .ts,.tsx --fix"
             ],
             "src/**/*.{css,scss}": [
                 "prettier --write",

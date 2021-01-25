@@ -30,6 +30,18 @@ Important Note: **The first time you run `yarn start` will take a while since el
 
 After the application starts, you are free to close the electron window and start to develop your application.
 
+Normally you could use 
+```
+import * as electron from 'electron'
+```
+At the moment, while I fix this issue, you should invoke electron in your typescript files as:
+
+```
+import electron from '@/electron
+```
+
+In further updates, this will be fixed to provide the correct import and allow correct imports.
+
 ## Adding Components
 Take advantage of the current `generate-react-cli.json` to generate components on the fly. To generate a new component run in your terminal
 ```

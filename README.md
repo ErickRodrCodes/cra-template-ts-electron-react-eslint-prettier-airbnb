@@ -33,7 +33,7 @@ After the application starts, you are free to close the electron window and star
 ## Adding Components
 Take advantage of the current `generate-react-cli.json` to generate components on the fly. To generate a new component run in your terminal
 ```
-$ npx generate-react-cli component MyNewComponent
+$ yarn add:component MyNewComponent
 ```
 ## Custom Paths
 Paths are defined in two places: 

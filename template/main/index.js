@@ -1,5 +1,12 @@
 /* eslint-disable no-console */
 /* eslint-disable import/no-extraneous-dependencies */
+/**
+ *  This eventually will be migrated into Typescript once I find a correct way to bundle it up.
+ *  You are welcome to open a branch and make it work in TS.
+ *  IT IS IMPORTANT THAT IT ACCEPTS DEPENDENCIES: it is certain that under this main directory
+ *  you will add files that are part of the electron main process.
+ */
+
 import { app, BrowserWindow } from 'electron';
 import installExtension, {
   REACT_DEVELOPER_TOOLS,
@@ -9,7 +16,7 @@ import isDev from 'electron-is-dev';
 
 console.log('starting Electron...');
 
-let mainWindow: BrowserWindow;
+let mainWindow;
 const mainWindowConfig = {
   width: 1280,
   height: 720,
@@ -18,7 +25,6 @@ const mainWindowConfig = {
   frame: true,
   transparent: false,
   webPreferences: {
-    // preload: path.join(app.getAppPath(), 'preload.js'),
     nodeIntegration: true,
     webSecurity: false,
     enableRemoteModule: true,

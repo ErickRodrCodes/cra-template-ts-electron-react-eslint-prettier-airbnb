@@ -10,5 +10,9 @@
             "filename": "CHANGELOG.md"
         }
     },
-    "strictLatest": false
+    "strictLatest": false,
+    "repo": {
+        "host": "github",
+        "repository": "cra-template-ts-electron-react-eslint-prettier-airbnb"
+    }
 }

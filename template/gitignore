@@ -21,3 +21,5 @@ out/
 
 /public/main.js
 /public/main.js.map
+
+dist/

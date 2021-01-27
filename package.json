@@ -1,6 +1,6 @@
 {
     "name": "cra-template-ts-electron-react-eslint-prettier-airbnb",
-    "version": "0.2.0",
+    "version": "0.1.11",
     "main": "template.json",
     "description": "An All-in-one template to create Electron applications with Create React App, TypeScript 4.1.3, support for SASS/SCSS files, Prettier and ESLint configurations recommended by Airbnb, and support for Recoil State Management Library.",
     "keywords": [
@@ -22,11 +22,19 @@
     "bugs": {
         "url": "https://github.com/tbogard/cra-ts-electron-react-eslint-prettier-airbnb/issues"
     },
-    "scripts": {
-        "release": "release-it"
-    },
     "dependencies": {},
+    "git": {
+        "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
+    },
+    "hooks": {
+        "after:bump": "npx auto-changelog -p"
+    },
     "devDependencies": {
-        "release-it": "^14.2.2"
+        "@release-it/keep-a-changelog": "^2.2.2"
+    },
+    "plugins": {
+        "@release-it/keep-a-changelog": {
+            "filename": "CHANGELOG.md"
+        }
     }
 }

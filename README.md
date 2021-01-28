@@ -50,3 +50,8 @@ or in SCSS
 ```
 @import "@/lib/scss/_master";
 ```
+
+## Did you like this template?
+Support my work by donating any value in dogecoin in this url :)
+
+https://dogechain.info/address/DFKcaAVmda9jTL59CBamSHEcYytXhd8Q2G
